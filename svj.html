@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            background-image: url(mceu_85182444141724146081667.webp);
+        }
+
+        header {
+            background-image: url('bmw-m5-staraya-bmv-angelskie.jpg');
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .title {
+            flex: 2;
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .logo img {
+            max-height: 50px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .car-details {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-details img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .car-details h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .car-details p {
+            margin: 5px 0;
+        }
+
+        .car-details .car-price {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .rent-form {
+            margin-top: 15px;
+        }
+
+        .rent-form input[type="text"],
+        .rent-form input[type="email"],
+        .rent-form input[type="number"],
+        .rent-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .rent-form button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .rent-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="code.html"><img src="images.png" alt="logo"></a>
+    </div>
+    <h1 class="title">Rent a Car</h1>
+</header>
+
+<main>
+    <div class="car-details">
+        <img src="lamborghini-aventador-svj-roadster-.jpg" alt="Lamborghini Aventador Svj Roadster">
+        <h2>Lamborghini Aventador Svj Roadster</h2>
+        <p>The SVJ Roadster delivers 720 Nm of torque at 6,750 rpm, with a weight-to-power ratio of 2.05 kg/hp.</p>
+        <p class="car-price">310,000 Rwf/day</p>
+        <form class="rent-form" action="thank-you.html" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="days">Number of Days:</label>
+            <input type="number" id="days" name="days" min="1" required>
+            
+            <button type="submit">Confirm Rental</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <h3>Contact Information</h3>
+    <p><strong>Email:</strong> <a href="mailto:rwandacarental@gmail.com">rwandacarental@gmail.com</a></p>
+    <p><strong>Phone:</strong> +250 0786087085</p>
+    <p><strong>Address:</strong> Kk 305 st 45</p>
+ 
+
+</body>
+</html>

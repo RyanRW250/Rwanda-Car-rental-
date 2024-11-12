@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-image: url('bmw-m5-staraya-bmv-angelskie.jpg');
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .search-bar {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .search-bar input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+        .search-bar button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #218838;
+        }
+        main {
+            padding: 20px;
+        }
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .car-listing {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .car-listing img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .car-details h3 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .car-price {
+            font-size: 1.5em;
+            color: #28a745;
+            margin: 10px 0;
+        }
+        .car-listing button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .car-listing button:hover {
+            background-color: #218838;
+        }
+        .no-results {
+            display: none;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .logo {
+            flex: 0 0 auto;
+        }
+        .logo img {
+            max-height: 50px; 
+        }
+        
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-image: url('bmw-m5-staraya-bmv-angelskie.jpg');
+        background-color: #333;
+        color: white;
+        padding: 20px;
+    }
+
+    .logo {
+        flex: 1;
+        text-align: left;
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+
+    .header-content {
+        flex: 3;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="code.html"> <img src="images.png" alt="logo"></a>
+    </div>
+    <h1>Rent a Car</h1>
+    <nav>
+        <a href="code.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="about us.html">About Us</a>
+    </nav>
+
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for a car...">
+        <button onclick="searchCars()">Search</button>
+    </div>
+</header>
+
+<main>
+    <h2>Available Cars for Rent</h2>
+    
+    <div class="car-grid">
+        
+        <div class="car-listing">
+            <img src="toyota camry.webp" alt="Toyota Camry">
+            <div class="car-details">
+                <h3>Toyota Camry</h3>
+                <p>Comfortable and spacious sedan with great fuel efficiency.</p>
+                <p class="car-price">100,000 Rwf/day</p>
+                <a href="toyota-camry.html"> <button>Rent now</button></a>
+            </div>
+        </div>
+
+      
+        <div class="car-listing">
+            <img src="ford mustang.jpg" alt="Ford Mustang">
+            <div class="car-details">
+                <h3>Ford Mustang</h3>
+                <p>Sporty coupe with powerful performance and stylish design.</p>
+                <p class="car-price">150,000 Rwf/day</p>
+                <a href="ford.html"> <button>Rent now</button></a>
+
+            </div>
+        </div>
+
+        
+        <div class="car-listing">
+            <img src="prado.jpg" alt="Toyota Prado">
+            <div class="car-details">
+                <h3>Toyota Prado</h3>
+                <p>The Toyota Prado has a 4461cc Diesel Engine and a 3956cc Petrol Engine. Available with Automatic transmission.</p>
+                <p class="car-price">250,000 Rwf/day</p>
+                <a href="toyota-prado.html"> <button>Rent now</button></a>
+            </div>
+        </div>
+
+
+        <div class="car-listing">
+            <img src="g631.webp" alt="Mercedes-AMG G 63">
+            <div class="car-details">
+                <h3>Mercedes-AMG G 63</h3>
+                <p>Legendary 4.0-liter V8 biturbo engine with 585 hp and 850 Nm of torque.</p>
+                <p class="car-price">300,000 Rwf/day</p>
+                <a href="amg.html"> <button>Rent now</button></a>
+            </div>
+        </div>
+
+        <div class="car-listing">
+            <img src="lamborghini-aventador-svj-roadster-.jpg" alt="Lamborghini Aventador SVJ Roadster">
+            <div class="car-details">
+                <h3>Lamborghini Aventador SVJ Roadster</h3>
+                <p>The SVJ Roadster delivers 720 Nm of torque at 6,750 rpm, with a weight-to-power ratio of 2.05 kg/hp.</p>
+                <p class="car-price">310,000 Rwf/day</p>
+                <a href="svj.html"> <button>Rent now</button></a>
+            </div>
+        </div>
+
+ 
+        <div class="car-listing">
+            <img src="porche.jpeg" alt="Porsche 911">
+            <div class="car-details">
+                <h3>Porsche 911</h3>
+                <p>The Porsche 911 has 2 Petrol Engines available. 2981 cc and 3996 cc. It is available with Automatic transmission.</p>
+                <p class="car-price">300,000 Rwf/day</p>
+                <a href="Porsche-911.html"> <button>Rent now</button></a>
+            </div>
+        </div>
+
+  
+        <div class="car-listing">
+            <img src="bmw-m4.jpeg" alt="BMW M4">
+            <div class="car-details">
+                <h3>BMW M4</h3>
+                <p>The BMW M4 is powered by the S55B30 engine, a 3.0-litre inline-6 engine developed by BMW M GmbH.</p>
+                <p class="car-price">260,000 Rwf/day</p>
+                <a href="bmw-m4.html"> <button>Rent now</button></a>
+             </div>
+        </div>
+
+         
+        <div class="car-listing">
+            <img src="off-road-prado.jpeg" alt="Off-road Toyota Prado">
+            <div class="car-details">
+                <h3>Off-road Toyota Prado</h3>
+                <p>The Toyota Prado comes with a 4461cc Diesel Engine and a 3956cc Petrol Engine, with an aftermarket off-road kit.</p>
+                <p class="car-price">255,000 Rwf/day</p>
+                <a href="off-road-prado.html"> <button>Rent now</button></a>
+            </div>
+        </div>
+    </div>
+
+    <p class="no-results" id="no-results">No cars available that match your search.</p>
+</main>
+
+<footer>
+    <h3>Contact Information</h3>
+    <p><strong>Email:</strong>  <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTLGtkQsNvcFgqxGXlHxmfQqgRkfQzNcZBkNkPtlTkpHbgppVGVQdMmsWDgfnJBMqmtLdB">rwandacarental@gmail.com</a></p>
+    <p><strong>Phone:</strong> +250 0786087085</p>
+    <p><strong>Address:</strong> Kk 305 st 45</p>
+   
+</footer>
+
+<script>
+    function searchCars() {
+        const searchTerm = document.getElementById("search-input").value.toLowerCase();
+        const carListings = document.querySelectorAll(".car-listing");
+        const noResultsMessage = document.getElementById("no-results");
+        let found = false;
+
+        carListings.forEach(car => {
+            const carName = car.querySelector("h3").textContent.toLowerCase();
+            const carDescription = car.querySelector("p").textContent.toLowerCase();
+          
+            if (carName.includes(searchTerm) || carDescription.includes(searchTerm)) {
+                car.style.display = "block";
+                found = true;
+            } else {
+                car.style.display = "none";
+            }
+        });
+
+        noResultsMessage.style.display = found ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
